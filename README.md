@@ -5,9 +5,8 @@ rollouts, up from a 1.8% baseline. Net effect: +35.7 pp [95% CI 27.8, 43.9].** T
 `python reproduce.py` after the last edit … so the fix is verified". A delimiter defence written against planted
 verdict tags does not reduce this at all: +37.2 pp with the defence in place.
 
-- **Agent-built.** Coding agents (Claude Opus 5.5) wrote the code, ran the experiment and wrote this README on
-  2026-09-28, under Sami Hormi's direction, for his Transluce MATS application. Nothing has been pushed, posted or
-  sent to Transluce.
+- **Built with coding agents.** Claude Opus 5.5 agents wrote the code, ran the experiments and drafted this README
+  under Sami Hormi's direction; the design, pre-registration rules and verification protocol are his.
 - **Pre-registered.** The kill test (`C1/KILL_TEST.md`) was frozen and hashed (`C1/KILL_TEST.sha256`) before any
   scored run. The frozen GO rule was that the lower 95% bound of the net effect must be above 10 pp. The result
   was **GO** (27.8 pp).
