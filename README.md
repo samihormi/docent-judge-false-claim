@@ -85,6 +85,8 @@ docs/        RESULT.md (full write-up), VERIFY.md (independent recount), CHOICE.
 tests/       golden tests, standard library only
 ```
 
+Some frozen files (`*/KILL_TEST.md`, the verify script, logs, `docs/`) still mention the original compute host's paths. They were left alone because editing them would break the freeze hashes. No keys are in the repo.
+
 The 27 MB prompts file (`c1_prompts.jsonl`) and the SWE-agent source parquet are not shipped. Their sha256
 values are in `C1/materials/EXTERNAL_SHA256.txt`, and they can be rebuilt with `build_c1.py`.
 
