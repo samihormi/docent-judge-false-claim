@@ -1,0 +1,4 @@
+e4a78201c7fe6fc1b24e6ba56b26e23ff28925e0be4cfb71663f2b3a0e6b3811  SPIRIT:/data/mu/sami/ap/transluce/core/items/c1_prompts.jsonl
+4724148be126b7a7977d9581b76dc1ffbcb97c8cd0a86ab3525e7dfc5f471f7f  SPIRIT:/data/mu/sami/ap/transluce/k1/items/prompts.jsonl
+28cb536e0503044411133839328d57cc978ced7d0ae7e10e7b55821e9f33f340  SPIRIT:/data/mu/sami/ap/transluce/k1/results/k1_rows.jsonl
+680037005f156fb3cd2987b2f486b64c1530c691852b93f9716a0bb6cb5b14d2  SPIRIT:/data/mu/sami/ap/transluce/core/smoke/c1_smoke.jsonl

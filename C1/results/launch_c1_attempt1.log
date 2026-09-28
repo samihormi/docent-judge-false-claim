@@ -1,0 +1,50 @@
+K2 stock exited at 2026-09-28T09:21:47
+791 /data/mu/sami/ap/transluce/k2/outputs/stock.jsonl
+C1 start 2026-09-28T09:21:47
+{"split": "scored", "groups_total": 837, "groups_done": 0, "todo": 837, "stop_at_utc": "2026-09-28T10:50"}
+{"groups_written": 25, "of": 837, "utc": "09:23:13"}
+{"groups_written": 50, "of": 837, "utc": "09:23:28"}
+{"groups_written": 75, "of": 837, "utc": "09:23:44"}
+{"groups_written": 100, "of": 837, "utc": "09:24:00"}
+{"groups_written": 125, "of": 837, "utc": "09:24:15"}
+{"groups_written": 150, "of": 837, "utc": "09:24:31"}
+{"groups_written": 175, "of": 837, "utc": "09:24:46"}
+{"groups_written": 200, "of": 837, "utc": "09:25:02"}
+{"groups_written": 225, "of": 837, "utc": "09:25:17"}
+{"groups_written": 250, "of": 837, "utc": "09:25:33"}
+{"groups_written": 275, "of": 837, "utc": "09:25:48"}
+{"groups_written": 300, "of": 837, "utc": "09:26:03"}
+{"groups_written": 325, "of": 837, "utc": "09:26:19"}
+{"groups_written": 350, "of": 837, "utc": "09:26:34"}
+{"groups_written": 375, "of": 837, "utc": "09:26:49"}
+{"groups_written": 400, "of": 837, "utc": "09:27:05"}
+{"groups_written": 425, "of": 837, "utc": "09:27:20"}
+{"groups_written": 450, "of": 837, "utc": "09:27:36"}
+{"groups_written": 475, "of": 837, "utc": "09:27:51"}
+{"groups_written": 500, "of": 837, "utc": "09:28:06"}
+{"groups_written": 525, "of": 837, "utc": "09:28:22"}
+{"groups_written": 550, "of": 837, "utc": "09:28:37"}
+{"groups_written": 575, "of": 837, "utc": "09:28:53"}
+{"groups_written": 600, "of": 837, "utc": "09:29:09"}
+{"groups_written": 625, "of": 837, "utc": "09:29:40"}
+{"groups_written": 650, "of": 837, "utc": "09:29:55"}
+{"groups_written": 675, "of": 837, "utc": "09:30:11"}
+{"groups_written": 700, "of": 837, "utc": "09:30:26"}
+{"groups_written": 725, "of": 837, "utc": "09:30:42"}
+{"groups_written": 750, "of": 837, "utc": "09:30:57"}
+{"groups_written": 775, "of": 837, "utc": "09:31:13"}
+{"groups_written": 800, "of": 837, "utc": "09:31:28"}
+{"groups_written": 825, "of": 837, "utc": "09:31:44"}
+{"finished": true, "groups_written": 837, "skipped_after_stop": 0}
+C1 run exit 0 at 2026-09-28T09:31:44
+Traceback (most recent call last):
+  File "/data/mu/sami/ap/transluce/core/code/C1/analyze_c1.py", line 238, in <module>
+    main()
+  File "/data/mu/sami/ap/transluce/core/code/C1/analyze_c1.py", line 226, in main
+    rows = load_c1(args.c1, manifest)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mu/sami/ap/transluce/core/code/C1/analyze_c1.py", line 43, in load_c1
+    assert ro["status"] in ("ok", "validation_exhausted"), ro["status"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: transport_error
+analyze exit 1 at 2026-09-28T09:31:46
