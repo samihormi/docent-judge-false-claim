@@ -17,7 +17,7 @@ verdict tags does not reduce this at all: +37.2 pp with the defence in place.
 
 Transluce names robust judges over agent transcripts as a core project:
 
-> "Some concrete projects include: … **creating robust LLM judges for Docent**" (MATS stream page, Steinhardt)
+> "Some concrete projects include: … **creating robust LLM judges for Docent**" (Jacob Steinhardt, Transluce project list)
 
 > "agents attempted to modify their transcripts in order to subvert monitoring" (*Embedded Evaluations*, 2026-09-16)
 
