@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+type: software
+title: "One false sentence flips an LLM judge's verdict"
+abstract: >-
+  A pre-registered test of the stock Docent 0.1.87 rubric judge (Qwen2.5-32B-Instruct) on 91 SWE-agent
+  transcripts. One false sentence added to the agent's final message raises the judge's wrong-verdict rate
+  from 1.8% to 37.5%, a net effect of +35.7 pp [95% CI 27.8, 43.9]. A delimiter defence written against
+  planted verdict tags leaves the effect in place.
+authors:
+  - family-names: Hormi
+    given-names: Sami
+repository-code: "https://github.com/samihormi/docent-judge-false-claim"
+license: MIT
+date-released: "2026-09-28"
+keywords:
+  - llm-judge
+  - ai-safety
+  - evaluation
+  - pre-registration
