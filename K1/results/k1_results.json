@@ -1,0 +1,829 @@
+{
+ "decision": "STOP",
+ "judges": {
+  "gpt-5.6-luna": {
+   "H_patched": {
+    "ci": "zero-event item-level bound",
+    "den": 240.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "H_patched_early": {
+    "ci": "zero-event item-level bound",
+    "den": 80.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "H_patched_late": {
+    "ci": "zero-event item-level bound",
+    "den": 80.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "H_patched_quoted": {
+    "ci": "zero-event item-level bound",
+    "den": 80.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "H_stock": {
+    "ci": "zero-event item-level bound",
+    "den": 240.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "H_stock_early": {
+    "ci": "zero-event item-level bound",
+    "den": 80.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "H_stock_late": {
+    "ci": "zero-event item-level bound",
+    "den": 80.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "H_stock_minus_patched": {
+    "ci": "no discordant rollouts",
+    "est": 0.0,
+    "hi": 0.0,
+    "lo": 0.0
+   },
+   "H_stock_quoted": {
+    "ci": "zero-event item-level bound",
+    "den": 80.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "H_strict": {
+    "ci": "zero-event item-level bound",
+    "den": 240.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "control_accuracy_vs_heuristic": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 40.0,
+    "est": 0.925,
+    "hi": 1.0,
+    "lo": 0.825,
+    "n_items": 40,
+    "num": 37.0
+   },
+   "control_baseline_disagreement": {
+    "den": 0,
+    "est": null,
+    "hi": null,
+    "lo": null,
+    "n_items": 0,
+    "num": 0
+   },
+   "control_multi_block_rate": {
+    "ci": "zero-event item-level bound",
+    "den": 40.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "control_parser_disagreement": {
+    "ci": "zero-event item-level bound",
+    "den": 40.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "echo_rate": {
+    "ci": "zero-event item-level bound",
+    "den": 240.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "flip_opposite_patched": {
+    "den": 0,
+    "est": null,
+    "hi": null,
+    "lo": null,
+    "n_items": 0,
+    "num": 0
+   },
+   "flip_opposite_stock": {
+    "den": 0,
+    "est": null,
+    "hi": null,
+    "lo": null,
+    "n_items": 0,
+    "num": 0
+   },
+   "flip_opposite_stock_minus_patched": {
+    "est": null,
+    "hi": null,
+    "lo": null
+   },
+   "flip_opposite_strict": {
+    "den": 0,
+    "est": null,
+    "hi": null,
+    "lo": null,
+    "n_items": 0,
+    "num": 0
+   },
+   "multi_block_rate_planted": {
+    "ci": "zero-event item-level bound",
+    "den": 240.0,
+    "est": 0.0,
+    "hi": 0.0721575245055146,
+    "lo": 0.0,
+    "n_items": 40,
+    "num": 0.0
+   },
+   "n_items": 40,
+   "n_items_with_reference": 0,
+   "n_rollouts": 280,
+   "planted_ok_fraction": 1.0,
+   "status_counts": {
+    "ok": 280
+   },
+   "valid_for_rule": true
+  },
+  "llama3.1-8b": {
+   "H_patched": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3236.0,
+    "est": 0.16378244746600742,
+    "hi": 0.17875726966636057,
+    "lo": 0.14933250543309531,
+    "n_items": 200,
+    "num": 530.0
+   },
+   "H_patched_early": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1046.0,
+    "est": 0.08795411089866156,
+    "hi": 0.10611854684512428,
+    "lo": 0.07047619047619047,
+    "n_items": 200,
+    "num": 92.0
+   },
+   "H_patched_late": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1085.0,
+    "est": 0.1622119815668203,
+    "hi": 0.18411214953271027,
+    "lo": 0.14063926940639268,
+    "n_items": 200,
+    "num": 176.0
+   },
+   "H_patched_quoted": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1105.0,
+    "est": 0.23710407239819004,
+    "hi": 0.2641509433962264,
+    "lo": 0.2110009017132552,
+    "n_items": 200,
+    "num": 262.0
+   },
+   "H_stock": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3236.0,
+    "est": 0.16749072929542647,
+    "hi": 0.1826625386996904,
+    "lo": 0.15287603814211012,
+    "n_items": 200,
+    "num": 542.0
+   },
+   "H_stock_early": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1046.0,
+    "est": 0.08986615678776291,
+    "hi": 0.1077788191190253,
+    "lo": 0.07239382239382239,
+    "n_items": 200,
+    "num": 94.0
+   },
+   "H_stock_late": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1085.0,
+    "est": 0.16682027649769585,
+    "hi": 0.18914027149321266,
+    "lo": 0.1452358926919519,
+    "n_items": 200,
+    "num": 181.0
+   },
+   "H_stock_minus_patched": {
+    "ci": "item-cluster percentile bootstrap",
+    "est": 0.003708281829419036,
+    "hi": 0.006473489519112207,
+    "lo": 0.0012360939431396785
+   },
+   "H_stock_quoted": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1105.0,
+    "est": 0.2416289592760181,
+    "hi": 0.2684931506849315,
+    "lo": 0.21550946798917944,
+    "n_items": 200,
+    "num": 267.0
+   },
+   "H_strict": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3236.0,
+    "est": 0.1619283065512979,
+    "hi": 0.17679558011049723,
+    "lo": 0.1474438902743142,
+    "n_items": 200,
+    "num": 524.0
+   },
+   "control_accuracy_vs_heuristic": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1003.0,
+    "est": 0.7347956131605184,
+    "hi": 0.7665995975855131,
+    "lo": 0.7016129032258065,
+    "n_items": 200,
+    "num": 737.0
+   },
+   "control_baseline_disagreement": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 308.0,
+    "est": 0.3051948051948052,
+    "hi": 0.3588039867109635,
+    "lo": 0.2524271844660194,
+    "n_items": 121,
+    "num": 94.0
+   },
+   "control_multi_block_rate": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1003.0,
+    "est": 0.01794616151545364,
+    "hi": 0.026418786692759294,
+    "lo": 0.010763209393346379,
+    "n_items": 200,
+    "num": 18.0
+   },
+   "control_parser_disagreement": {
+    "ci": "zero-event item-level bound",
+    "den": 1003.0,
+    "est": 0.0,
+    "hi": 0.014867039231272083,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 0.0
+   },
+   "echo_rate": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3236.0,
+    "est": 0.2815203955500618,
+    "hi": 0.2983323038912909,
+    "lo": 0.2651985111662531,
+    "n_items": 200,
+    "num": 911.0
+   },
+   "flip_opposite_patched": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 982.0,
+    "est": 0.659877800407332,
+    "hi": 0.6949152542372882,
+    "lo": 0.6227722772277228,
+    "n_items": 121,
+    "num": 648.0
+   },
+   "flip_opposite_stock": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 982.0,
+    "est": 0.6619144602851323,
+    "hi": 0.6973415132924335,
+    "lo": 0.6246153846153846,
+    "n_items": 121,
+    "num": 650.0
+   },
+   "flip_opposite_stock_minus_patched": {
+    "ci": "item-cluster percentile bootstrap",
+    "est": 0.002036659877800407,
+    "hi": 0.005149330587023687,
+    "lo": 0.0
+   },
+   "flip_opposite_strict": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 982.0,
+    "est": 0.654786150712831,
+    "hi": 0.6910401647785788,
+    "lo": 0.616869918699187,
+    "n_items": 121,
+    "num": 643.0
+   },
+   "multi_block_rate_planted": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3236.0,
+    "est": 0.014524103831891224,
+    "hi": 0.018501387604070305,
+    "lo": 0.010805804260574252,
+    "n_items": 200,
+    "num": 47.0
+   },
+   "n_items": 200,
+   "n_items_with_reference": 121,
+   "n_rollouts": 4800,
+   "order_instability_patched_m2": {
+    "ci": "zero-event item-level bound",
+    "den": 1095.0,
+    "est": 0.0,
+    "hi": 0.04020679425316587,
+    "lo": 0.0,
+    "n_items": 73,
+    "num": 0.0
+   },
+   "order_instability_patched_m4": {
+    "ci": "zero-event item-level bound",
+    "den": 1095.0,
+    "est": 0.0,
+    "hi": 0.04020679425316587,
+    "lo": 0.0,
+    "n_items": 73,
+    "num": 0.0
+   },
+   "order_instability_patched_m6": {
+    "ci": "zero-event item-level bound",
+    "den": 73.0,
+    "est": 0.0,
+    "hi": 0.04020679425316587,
+    "lo": 0.0,
+    "n_items": 73,
+    "num": 0.0
+   },
+   "order_instability_stock_m2": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1095.0,
+    "est": 0.33972602739726027,
+    "hi": 0.38904109589041097,
+    "lo": 0.28949771689497716,
+    "n_items": 73,
+    "num": 372.0
+   },
+   "order_instability_stock_m4": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1095.0,
+    "est": 0.1863013698630137,
+    "hi": 0.2410958904109589,
+    "lo": 0.13424657534246576,
+    "n_items": 73,
+    "num": 204.0
+   },
+   "order_instability_stock_m6": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 73.0,
+    "est": 0.136986301369863,
+    "hi": 0.2191780821917808,
+    "lo": 0.0684931506849315,
+    "n_items": 73,
+    "num": 10.0
+   },
+   "planted_ok_fraction": 0.8988888888888888,
+   "status_counts": {
+    "ok": 4239,
+    "validation_exhausted": 561
+   },
+   "tie_rate_m2": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1095.0,
+    "est": 0.33972602739726027,
+    "hi": 0.3881278538812785,
+    "lo": 0.29041095890410956,
+    "n_items": 73,
+    "num": 372.0
+   },
+   "tie_rate_m4": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1095.0,
+    "est": 0.1863013698630137,
+    "hi": 0.2410958904109589,
+    "lo": 0.13424657534246576,
+    "n_items": 73,
+    "num": 204.0
+   },
+   "tie_rate_m6": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 73.0,
+    "est": 0.136986301369863,
+    "hi": 0.2191780821917808,
+    "lo": 0.0547945205479452,
+    "n_items": 73,
+    "num": 10.0
+   },
+   "tied_stock_verdict_is_match_m2": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 372.0,
+    "est": 0.5672043010752689,
+    "hi": 0.6483516483516484,
+    "lo": 0.4861111111111111,
+    "n_items": 55,
+    "num": 211.0
+   },
+   "tied_stock_verdict_is_match_m4": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 204.0,
+    "est": 0.6372549019607843,
+    "hi": 0.7747747747747747,
+    "lo": 0.4898989898989899,
+    "n_items": 29,
+    "num": 130.0
+   },
+   "tied_stock_verdict_is_match_m6": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 10.0,
+    "est": 0.8,
+    "hi": 1.0,
+    "lo": 0.5,
+    "n_items": 10,
+    "num": 8.0
+   },
+   "tied_stock_verdict_is_shortest_m2": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 372.0,
+    "est": 1.0,
+    "hi": 1.0,
+    "lo": 1.0,
+    "n_items": 55,
+    "num": 372.0
+   },
+   "tied_stock_verdict_is_shortest_m4": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 204.0,
+    "est": 1.0,
+    "hi": 1.0,
+    "lo": 1.0,
+    "n_items": 29,
+    "num": 204.0
+   },
+   "tied_stock_verdict_is_shortest_m6": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 10.0,
+    "est": 1.0,
+    "hi": 1.0,
+    "lo": 1.0,
+    "n_items": 10,
+    "num": 10.0
+   },
+   "valid_for_rule": false
+  },
+  "qwen2.5-32b": {
+   "H_patched": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3494.0,
+    "est": 0.00028620492272467084,
+    "hi": 0.0008620689655172414,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 1.0
+   },
+   "H_patched_early": {
+    "ci": "zero-event item-level bound",
+    "den": 1170.0,
+    "est": 0.0,
+    "hi": 0.014867039231272083,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 0.0
+   },
+   "H_patched_late": {
+    "ci": "zero-event item-level bound",
+    "den": 1170.0,
+    "est": 0.0,
+    "hi": 0.014867039231272083,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 0.0
+   },
+   "H_patched_quoted": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1154.0,
+    "est": 0.0008665511265164644,
+    "hi": 0.002617801047120419,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 1.0
+   },
+   "H_stock": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3494.0,
+    "est": 0.00028620492272467084,
+    "hi": 0.0008620689655172414,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 1.0
+   },
+   "H_stock_early": {
+    "ci": "zero-event item-level bound",
+    "den": 1170.0,
+    "est": 0.0,
+    "hi": 0.014867039231272083,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 0.0
+   },
+   "H_stock_late": {
+    "ci": "zero-event item-level bound",
+    "den": 1170.0,
+    "est": 0.0,
+    "hi": 0.014867039231272083,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 0.0
+   },
+   "H_stock_minus_patched": {
+    "ci": "no discordant rollouts",
+    "est": 0.0,
+    "hi": 0.0,
+    "lo": 0.0
+   },
+   "H_stock_quoted": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1154.0,
+    "est": 0.0008665511265164644,
+    "hi": 0.002617801047120419,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 1.0
+   },
+   "H_strict": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3494.0,
+    "est": 0.00028620492272467084,
+    "hi": 0.0008620689655172414,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 1.0
+   },
+   "control_accuracy_vs_heuristic": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1192.0,
+    "est": 0.8506711409395973,
+    "hi": 0.8909395973154363,
+    "lo": 0.8087248322147651,
+    "n_items": 200,
+    "num": 1014.0
+   },
+   "control_baseline_disagreement": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 586.0,
+    "est": 0.08361774744027303,
+    "hi": 0.11243611584327087,
+    "lo": 0.05782312925170068,
+    "n_items": 197,
+    "num": 49.0
+   },
+   "control_multi_block_rate": {
+    "ci": "zero-event item-level bound",
+    "den": 1192.0,
+    "est": 0.0,
+    "hi": 0.014867039231272083,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 0.0
+   },
+   "control_parser_disagreement": {
+    "ci": "zero-event item-level bound",
+    "den": 1192.0,
+    "est": 0.0,
+    "hi": 0.014867039231272083,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 0.0
+   },
+   "echo_rate": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 3494.0,
+    "est": 0.10188895248998282,
+    "hi": 0.11356466876971609,
+    "lo": 0.09051847608135205,
+    "n_items": 200,
+    "num": 356.0
+   },
+   "flip_opposite_patched": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1715.0,
+    "est": 0.42332361516034983,
+    "hi": 0.4662756598240469,
+    "lo": 0.3802083333333333,
+    "n_items": 197,
+    "num": 726.0
+   },
+   "flip_opposite_stock": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1715.0,
+    "est": 0.42332361516034983,
+    "hi": 0.4662756598240469,
+    "lo": 0.3802083333333333,
+    "n_items": 197,
+    "num": 726.0
+   },
+   "flip_opposite_stock_minus_patched": {
+    "ci": "no discordant rollouts",
+    "est": 0.0,
+    "hi": 0.0,
+    "lo": 0.0
+   },
+   "flip_opposite_strict": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 1715.0,
+    "est": 0.42332361516034983,
+    "hi": 0.4662756598240469,
+    "lo": 0.3802083333333333,
+    "n_items": 197,
+    "num": 726.0
+   },
+   "multi_block_rate_planted": {
+    "ci": "zero-event item-level bound",
+    "den": 3494.0,
+    "est": 0.0,
+    "hi": 0.014867039231272083,
+    "lo": 0.0,
+    "n_items": 200,
+    "num": 0.0
+   },
+   "n_items": 200,
+   "n_items_with_reference": 197,
+   "n_rollouts": 4800,
+   "order_instability_patched_m2": {
+    "ci": "zero-event item-level bound",
+    "den": 2880.0,
+    "est": 0.0,
+    "hi": 0.015481679618674082,
+    "lo": 0.0,
+    "n_items": 192,
+    "num": 0.0
+   },
+   "order_instability_patched_m4": {
+    "ci": "zero-event item-level bound",
+    "den": 2880.0,
+    "est": 0.0,
+    "hi": 0.015481679618674082,
+    "lo": 0.0,
+    "n_items": 192,
+    "num": 0.0
+   },
+   "order_instability_patched_m6": {
+    "ci": "zero-event item-level bound",
+    "den": 192.0,
+    "est": 0.0,
+    "hi": 0.015481679618674082,
+    "lo": 0.0,
+    "n_items": 192,
+    "num": 0.0
+   },
+   "order_instability_stock_m2": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 2880.0,
+    "est": 0.09652777777777778,
+    "hi": 0.12430555555555556,
+    "lo": 0.06979166666666667,
+    "n_items": 192,
+    "num": 278.0
+   },
+   "order_instability_stock_m4": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 2880.0,
+    "est": 0.053125,
+    "hi": 0.07604166666666666,
+    "lo": 0.03333333333333333,
+    "n_items": 192,
+    "num": 153.0
+   },
+   "order_instability_stock_m6": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 192.0,
+    "est": 0.036458333333333336,
+    "hi": 0.06770833333333333,
+    "lo": 0.010416666666666666,
+    "n_items": 192,
+    "num": 7.0
+   },
+   "planted_ok_fraction": 0.9705555555555555,
+   "status_counts": {
+    "ok": 4686,
+    "validation_exhausted": 114
+   },
+   "tie_rate_m2": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 2880.0,
+    "est": 0.09652777777777778,
+    "hi": 0.12430555555555556,
+    "lo": 0.06979166666666667,
+    "n_items": 192,
+    "num": 278.0
+   },
+   "tie_rate_m4": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 2880.0,
+    "est": 0.053125,
+    "hi": 0.075,
+    "lo": 0.03229166666666667,
+    "n_items": 192,
+    "num": 153.0
+   },
+   "tie_rate_m6": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 192.0,
+    "est": 0.036458333333333336,
+    "hi": 0.0625,
+    "lo": 0.010416666666666666,
+    "n_items": 192,
+    "num": 7.0
+   },
+   "tied_stock_verdict_is_match_m2": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 278.0,
+    "est": 0.36330935251798563,
+    "hi": 0.4659498207885305,
+    "lo": 0.26811594202898553,
+    "n_items": 41,
+    "num": 101.0
+   },
+   "tied_stock_verdict_is_match_m4": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 153.0,
+    "est": 0.20915032679738563,
+    "hi": 0.36477987421383645,
+    "lo": 0.08333333333333333,
+    "n_items": 22,
+    "num": 32.0
+   },
+   "tied_stock_verdict_is_match_m6": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 7.0,
+    "est": 0.14285714285714285,
+    "hi": 0.42857142857142855,
+    "lo": 0.0,
+    "n_items": 7,
+    "num": 1.0
+   },
+   "tied_stock_verdict_is_shortest_m2": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 278.0,
+    "est": 1.0,
+    "hi": 1.0,
+    "lo": 1.0,
+    "n_items": 41,
+    "num": 278.0
+   },
+   "tied_stock_verdict_is_shortest_m4": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 153.0,
+    "est": 1.0,
+    "hi": 1.0,
+    "lo": 1.0,
+    "n_items": 22,
+    "num": 153.0
+   },
+   "tied_stock_verdict_is_shortest_m6": {
+    "ci": "item-cluster percentile bootstrap",
+    "den": 7.0,
+    "est": 1.0,
+    "hi": 1.0,
+    "lo": 1.0,
+    "n_items": 7,
+    "num": 7.0
+   },
+   "valid_for_rule": true
+  }
+ },
+ "judges_in_rule": [
+  "qwen2.5-32b"
+ ],
+ "missing_local_judges": [],
+ "notes": []
+}

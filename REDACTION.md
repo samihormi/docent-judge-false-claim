@@ -95,3 +95,54 @@ Line numbers refer to the current files. Each entry replaces the same number of 
 100: ## 7. How to run (compute host, `<workdir>/k2`, code in `code/{K1,K2}`)
 103: export TMPDIR=<workdir>/k2/cache/tmp
 ```
+
+## Added on 2026-10-07: result files of the two earlier tests
+
+`K1/RESULT.md`, `K1/VERIFY.md` and `K2/RESULT.md` were added with the same kinds of text removed as above; no number, count, definition or verdict was edited. `K1/DEVIATIONS.md`, `K1/results/K1_RESULTS_TABLES.md`, `K1/results/k1_results.json`, `K2/results/k2_results.json` and `K2/results/recount_output.txt` were added byte-identical to the originals. `C1/RESULT.md` is a byte-identical copy of `docs/RESULT.md`. The commit hashes these files quote (`e366261`, `62891f2`, `2d261a2`, `01bc24b`) belong to the history that was rebuilt on 2026-10-06 and are not in this repository; "the README" in them means the README of that time.
+
+| file | original sha256 | new sha256 | lines removed / added | what was removed |
+|---|---|---|---|---|
+| `K1/RESULT.md` | `971360c8e5430f658c0c97a5c99e1f8d43d9c90276e051f08e47f0f4729e2c44` | `56db507ebcd2dde2009f8e3cb53028f0d9470af79a53d4bdaa0ece6761de2e60` | 8 / 8 | host name; work-directory path; internal spend-log path and field; one clause of internal status |
+| `K1/VERIFY.md` | `8161e75100a72ff6b5ac53e26f4227319fd7acf6600d0d729bef04ed8cde7696` | `a789cab1aa9a7a96191e5432ed387bd617f561ae20543fd0ccbe40a2c25b6911` | 10 / 10 | host name; work-directory path; internal spend-log path and field |
+| `K2/RESULT.md` | `7b38ad8f5ed7950421d564e47142d3f712ce01b20808f90a0177640d26df96c5` | `86be0243565c3b8bf39238f92aa3364d73c886b4a9195653d462c5dfc1b6a311` | 3 / 3 | host name; work-directory path; one clause of internal status |
+| `K1/DEVIATIONS.md` | `f26b08a8cf77464a9814453ed2a194bbf92d2fd19f46cfe51c3d32fabea43b51` | unchanged | 0 / 0 | nothing |
+| `K1/results/K1_RESULTS_TABLES.md` | `dad9a016846fd3495ec915d0b1a815b2df7d867f77d98126360793b4255034eb` | unchanged | 0 / 0 | nothing |
+| `K1/results/k1_results.json` | `81a0a404b3c287f5a2e58447d02309593c90acc4c6f31751fcceb2cabb22fae3` | unchanged | 0 / 0 | nothing |
+| `K2/results/k2_results.json` | `da71dcf8413a4b0b87a7c70b80c04aeef8749c33f156a2a5fe07c6a6c6efced4` | unchanged | 0 / 0 | nothing |
+| `K2/results/recount_output.txt` | `61d3cf5862e3be088b67350365fb3a37c5ff5b61a0304cf32712e78eebe46faa` | unchanged | 0 / 0 | nothing |
+
+**`K1/RESULT.md`**
+
+```text
+6: fix to `analyze.py`: a crash fix that changes no definition (D1, below). Nothing had been
+7: published. Raw outputs are on the compute host (hashes below). `results/k1_results.json` and
+107: `SPEND.jsonl` under `"run": "docent-k1"`.
+189:   - The code ran from a fresh copy on the compute host (`k1/code_frozen/K1`), hash-verified before any call.
+193:   - Qwen ran on GPU 0 and Llama on GPU 1, with `--group-concurrency 24`. The API arm ran from the compute host
+195:     the local log afterwards; a $0 line another agent had added meanwhile was kept.
+198: ## Provenance (compute host, `<workdir>/k1/`)
+208: from read-only scripts `logs/k1_desc.py`, `logs/k1_ex.py` and `logs/k1_ex2.py` on the compute host. They compute
+```
+
+**`K1/VERIFY.md`**
+
+```text
+4: materials and recounted every reported number from the raw judge outputs on the compute host, using its own script. That
+10: Scripts (compute host): `<workdir>/k1/logs/verify_recount.py` and `logs/verify_show.py`.
+51: | `shasum -a 256 -c KILL_TEST.sha256` locally, in `K1/` | 10/11 OK. `analyze.py` FAILED, as `DEVIATIONS.md` D1 says it should |
+52: | same check on the compute host, `code_frozen/K1` | the same 10/11 OK, with the same single failure |
+53: | `analyze.py` current sha256 | `44aab8e3…75ed`, the value D1 records, both locally and on the compute host |
+55: | `items/prompts.jsonl` (compute host) | `4724148b…71f7f`, matching `EXTERNAL_SHA256.txt` |
+57: | manifest copy on the compute host | `7155fc95…9d`, matching the frozen value |
+60: [V-AGENT]. The docent loaded on the compute host does contain the first-match loop in `_parse_xml_key_output` that
+63: **Timing.** The freeze commit is `e366261` at 14:53 +0800 (06:53 UTC). On the compute host, `run_qwen.log`,
+123: - **API spend:** `SPEND.jsonl` has 319 `docent-k1` lines, summing to $4.018 estimated. This
+```
+
+**`K2/RESULT.md`**
+
+```text
+6: `2d261a2`; all 7 hashed files re-verified `OK` on the compute host before the run). No deviation from any frozen
+7: file. $0: open-weight judge on local GPUs, no API calls. Nothing published.
+83: ## Provenance (compute host, `<workdir>/k2/`)
+```

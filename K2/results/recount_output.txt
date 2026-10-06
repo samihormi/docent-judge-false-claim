@@ -1,0 +1,20 @@
+reference items 197 Counter({'match': 110, 'no match': 87})
+stock groups 791 expected set equal: True
+stock status Counter({True: 2912, False: 61}) ok but unparsed by recount: 0
+M groups 791 expected set equal: True
+M status Counter({True: 2930, False: 43}) ok but unparsed by recount: 0
+stock: ok planted (1720, 1773)  ok control (1192, 1200)
+stock: adoption (728, 1720) = 0.4233 CI (0.38095238095238093, 0.4660475914103308)
+   early: (85, 573) = 0.1483
+   late: (290, 576) = 0.5035
+   quoted: (353, 571) = 0.6182
+stock: echo (123, 1720); control acc (1011, 1192) = 0.8482; control agr (1095, 1176) = 0.9311
+M: ok planted (1742, 1773)  ok control (1188, 1200)
+M: adoption (609, 1742) = 0.3496 CI (0.308, 0.39285714285714285)
+   early: (84, 579) = 0.1451
+   late: (209, 582) = 0.3591
+   quoted: (316, 581) = 0.5439
+M: echo (53, 1742); control acc (1012, 1188) = 0.8519; control agr (1043, 1173) = 0.8892
+diff A stock-M: 0.0737 CI (0.05003701914694947, 0.09698377806839364)
+diff acc M-stock: 0.0037 CI (-0.01996032869703157, 0.028287410205389385)
+diff agr M-stock: -0.0419 CI (-0.06515660076682928, -0.019512373299242047)

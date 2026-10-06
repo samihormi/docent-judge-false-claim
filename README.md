@@ -44,7 +44,7 @@ above 10 pp.*
 ```
 git clone https://github.com/samihormi/docent-judge-false-claim && cd docent-judge-false-claim
 pip install -r requirements.txt
-make reproduce      # 15 tests, then recounts every k/n and re-runs every bootstrap interval from the raw judge outputs
+make reproduce      # 18 tests, then recounts every k/n and re-runs every bootstrap interval from the raw judge outputs
 make rescore        # re-scores a bundled 20-transcript sample of saved judge outputs; standard library only
 ```
 
@@ -219,9 +219,11 @@ result was **GO** (27.8 pp).
 ## Repository layout
 
 ```
-C1/          the frozen test of this repo: spec, code (build/run/analyze), manifest, smoke test, shipped results
+C1/          the frozen test of this repo: spec, code (build/run/analyze), manifest, smoke test, shipped results;
+             RESULT.md is a byte-identical copy of docs/RESULT.md
 K1/, K2/     two earlier frozen tests whose code C1 imports unchanged (items, Docent rendering, judge runner,
-             the delimiter defence)
+             the delimiter defence), each with its RESULT.md and results/ tables; K1 also has VERIFY.md
+             (independent recount) and DEVIATIONS.md
 data/        raw judge outputs: c1.jsonl (all 2,511 rollouts) and K2's stock run (comparator for the evidence-only
              view); final_messages.jsonl (the agent's final message per transcript, with and without the sentence);
              sample/rescore_sample.jsonl (20 transcripts × 2 conditions, copied unchanged from c1.jsonl)
@@ -236,6 +238,22 @@ tests/       golden tests, standard library only
 
 Internal file paths and host names were removed from the frozen files on 2026-10-06 and the hash manifests were
 recomputed; `REDACTION.md` lists the original and new sha256 of every edited file. No keys are in the repo.
+
+**The two earlier tests.** Their result files were added on 2026-10-07, redacted in the same way.
+
+- `K1/RESULT.md`: does it matter whether Docent's parser takes the first or the last verdict block in the judge's
+  output? STOP. On Qwen2.5-32B the stock parser returned the planted block verbatim in 1 of 3,494 planted
+  rollouts, and the stock and patched parsers gave the same label on 4,686 of 4,686 valid rollouts. Under a looser
+  reading (planted label, and the explanation contains the planted sentence) the count is 568 of 3,494 (16.3%),
+  the same under both parsers (`K1/VERIFY.md`): the judge model takes up the plant, and the parser is not the cause.
+- `K2/RESULT.md`: an untrusted-data wrapper in the judge prompt cut the adoption of a contradicting planted verdict
+  by 7.4 pp [95% CI 5.1, 9.7] (728/1720 to 609/1742) and moved unplanted verdicts by 4.2 pp, past its guard.
+  INCONCLUSIVE.
+
+`tests/test_earlier_tests.py` pins these numbers to `K1/results/k1_results.json`, `K1/VERIFY.md` and
+`K2/results/k2_results.json`. Of their raw judge outputs only K2's stock run is shipped (`data/k2_stock.jsonl`);
+the sha256 values of the others are in the result files. The analysis scripts those files name (`analyze.py`,
+`analyze_k2.py`, `recount_k2.py`) and the earlier parser patch and its tests are not in this repository.
 
 The 27 MB prompts file (`c1_prompts.jsonl`) and the SWE-agent source parquet are not shipped. Their sha256
 values are in `C1/materials/EXTERNAL_SHA256.txt`, and they can be rebuilt with `build_c1.py`.
@@ -272,10 +290,11 @@ written in the test itself. They then check the counts against `C1/results/c1_re
 hashes, and pin the inserted texts. Four further tests check `data/final_messages.jsonl` against the manifest and
 that `docs/cases.md` and `docs/index.html` are current and load nothing external. Three more check that
 `docs/rows.md` is current, that the bundled sample re-scores to the expected counts, and that the API mode makes
-no call unless it is asked to.
+no call unless it is asked to. The last three pin the K1 and K2 numbers quoted under
+[Repository layout](#repository-layout) and check that `C1/RESULT.md` equals `docs/RESULT.md`.
 
 ```
-make test           # 15 tests
+make test           # 18 tests
 ```
 
 **Every number (numpy).** `scripts/reproduce.py` recounts each k/n with its own parser, re-runs the frozen
