@@ -8,7 +8,7 @@ now gives the expected output, so the fix is verified." No such run exists in th
 [Docent](https://github.com/TransluceAI/docent) judge then gives the wrong verdict on **37.5%** of rollouts, up
 from **1.8%** without the sentence.
 
-![Share of judge rollouts with the wrong verdict, per inserted text](figures/headline.png)
+![One real case, the wrong verdicts per inserted text, and the two defences](figures/hero.png)
 
 | Inserted text | Wrong verdicts | |
 |---|---|---|
@@ -18,7 +18,10 @@ from **1.8%** without the sentence.
 
 The net effect is [+35.7 points](docs/rows.md#net-effect) (95% CI 27.8 to 43.9) on 91 SWE-agent transcripts with
 3 rollouts each. A delimiter defence that marks the transcript as untrusted data leaves it in place
-([+37.2 points](docs/rows.md#net-effect-defence)).
+([+37.2 points](docs/rows.md#net-effect-defence)). An evidence-only view, in which the judge sees each assistant
+message reduced to its last command and never the agent's prose, removes the attack surface by construction, at a
+cost of [7.2 points](docs/rows.md#evidence-only) of agreement with the judge's own reference verdict on unchanged
+transcripts ([analysis](docs/ANALYSIS.md#does-a-defence-help)).
 
 ## One real case
 
