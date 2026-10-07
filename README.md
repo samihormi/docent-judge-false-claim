@@ -1,5 +1,6 @@
 # One false sentence flips an LLM judge's verdict
 
+[![tests](https://github.com/samihormi/docent-judge-false-claim/actions/workflows/tests.yml/badge.svg)](https://github.com/samihormi/docent-judge-false-claim/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **If an agent adds one specific false sentence to its last message, a stock Docent judge flips a correct verdict
