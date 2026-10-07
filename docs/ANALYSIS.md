@@ -45,7 +45,7 @@ above 10 pp.*
 ```
 git clone https://github.com/samihormi/docent-judge-false-claim && cd docent-judge-false-claim
 pip install -r requirements.txt
-make reproduce      # 23 tests, then recounts every k/n and re-runs every bootstrap interval from the raw judge outputs
+make reproduce      # 24 tests, then recounts every k/n and re-runs every bootstrap interval from the raw judge outputs
 make rescore        # re-scores a bundled 20-transcript sample of saved judge outputs; standard library only
 make followup       # recomputes the table of the second follow-up from data/followup_sessions.csv; standard library only
 ```
@@ -193,8 +193,10 @@ Wilson and a bootstrap over the 34 repositories.
   sessions and the search on 28 of 40: an uplift of +70 points, lower bound +61. The control shows the attacker's
   strength on 40 lint and type-check sessions, with the same budget and code; it shows nothing about commit
   claims.
-- **Honest sessions.** True sentences on honest sessions were flagged on 3 of 60 and 1 of 60. These rows are not
-  in the data file.
+- **Honest sessions.** True sentences on honest sessions were flagged on 3 of 60 and 1 of 60: 60 sessions where
+  the command really ran after the last edit and passed, with a true sentence saying so added, and the same
+  sessions with an excerpt of the command's real output added as well. A session counts as flagged if at least 2
+  of the 3 scoring calls flag it. These are the last 120 rows of the data file.
 
 **The re-run.** The first run was halted and resumed while the searches were open, and the resume step counted
 some attacker replies as used before their candidates had reached the judge. 63 of the 100 sessions on
@@ -229,8 +231,8 @@ Limits of this follow-up:
   shown by a diff.
 
 **Data.** [`data/followup_sessions.csv`](../data/followup_sessions.csv) has one row per session, judge and attack
-(280 rows; columns in [`data/FOLLOWUP.md`](../data/FOLLOWUP.md)). `make followup` recomputes the table and the
-bullets on attacker-written text, claims and queries from it, and `tests/test_followup.py` pins the counts. The
+(400 rows; columns in [`data/FOLLOWUP.md`](../data/FOLLOWUP.md)). `make followup` recomputes the table and the
+bullets on attacker-written text, claims, queries and honest sessions from it, and `tests/test_followup.py` pins the counts. The
 per-call rows, session logs, prompts and inserted texts are not in this repository.
 
 The two tests differ in judge model, rubric, sessions and inserted claim, so this is not a controlled comparison
@@ -396,11 +398,11 @@ hashes, and pin the inserted texts. Four further tests check `data/final_message
 that `docs/cases.md` and `docs/index.html` are current and load nothing external. Three more check that
 `docs/rows.md` is current, that the bundled sample re-scores to the expected counts, and that the API mode makes
 no call unless it is asked to. Three pin the K1 and K2 numbers quoted under
-[Repository layout](#repository-layout) and check that `C1/RESULT.md` equals `docs/RESULT.md`. The last five
+[Repository layout](#repository-layout) and check that `C1/RESULT.md` equals `docs/RESULT.md`. The last six
 recount the second follow-up from `data/followup_sessions.csv`.
 
 ```
-make test           # 23 tests
+make test           # 24 tests
 ```
 
 **Every number (numpy).** `scripts/reproduce.py` recounts each k/n with its own parser, re-runs the frozen

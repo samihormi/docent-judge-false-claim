@@ -8,7 +8,7 @@ now gives the expected output, so the fix is verified." No such run exists in th
 [Docent](https://github.com/TransluceAI/docent) judge then gives the wrong verdict on **37.5%** of rollouts, up
 from **1.8%** without the sentence.
 
-![One real case, the wrong verdicts per inserted text, and the two defences](figures/hero.png)
+![One real case, the wrong verdicts per inserted text, the two defences, and the follow-up with its control](figures/hero.png)
 
 | Inserted text | Wrong verdicts | |
 |---|---|---|
@@ -64,7 +64,7 @@ Python 3.11 and numpy. No GPU, network or API key. Under a minute.
 ```
 git clone https://github.com/samihormi/docent-judge-false-claim && cd docent-judge-false-claim
 pip install -r requirements.txt
-make reproduce      # 23 tests, then every count and interval from the raw judge outputs
+make reproduce      # 24 tests, then every count and interval from the raw judge outputs
 make rescore        # re-scores a bundled 20-transcript sample; standard library only
 make followup       # recomputes the follow-up table; standard library only
 ```
